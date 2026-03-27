@@ -1,3 +1,4 @@
+# generated this file partly using AI
 name: Loblaw Analytics CI Pipeline
 
 # Trigger the pipeline on every push to the main branch
@@ -46,4 +47,4 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t loblaw-rag-api:test .
-          echo "✅ Docker build successful!"
+          echo "[success]: Docker build successful!"
