@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+
 from langchain_core.documents import Document
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -41,13 +42,13 @@ class RAGService:
             "You are an intelligent retail data assistant for Loblaw Merchandise Analytics. "
             "Use ONLY the provided retrieved context to answer the user's question. "
             "If you don't know the answer, say 'I cannot find that in our current inventory data.' "
-            "Context: {context}"
+            "Context: {context}"        # add more context in a scaled up version?
         )
         prompt = ChatPromptTemplate.from_messages([("system", system_prompt), ("human", "{input}")])
 
         question_answer_chain = create_stuff_documents_chain(llm, prompt)
         self.rag_chain = create_retrieval_chain(retriever, question_answer_chain)
-        print("✅ AI Engine is online.")
+        print("[success]: AI Engine is online.")
 
     def ask_question(self, question: str) -> str:
         if not self.rag_chain:
@@ -55,5 +56,5 @@ class RAGService:
         response = self.rag_chain.invoke({"input": question})
         return response['answer']
 
-# Create a single instance to be used across the app
+# to use single instance across the app
 rag_engine = RAGService()
