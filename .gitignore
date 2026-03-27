@@ -11,4 +11,6 @@ chroma_db/
 # OS Files
 .DS_Store
 
+# Other
+notes.txt
 # Note: We ARE allowing data/inventory_10k.csv to be committed 
