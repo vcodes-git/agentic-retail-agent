@@ -1,0 +1,14 @@
+# Environments
+.env
+venv/
+env/
+__pycache__/
+
+# Databases and Vectors
+chroma_db/
+*.sqlite3
+
+# OS Files
+.DS_Store
+
+# Note: We ARE allowing data/inventory_10k.csv to be committed 
