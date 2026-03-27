@@ -1,4 +1,4 @@
-# Loblaw Merchandise Analytics: RAG API Microservice
+# Merchandise Analytics: RAG API Microservice
 
 A Proof of Concept (POC) demonstrating how Large Language Models (LLMs) and Vector Databases can be leveraged to extract dynamic, 1:1 insights from large-scale retail inventory data.
 
