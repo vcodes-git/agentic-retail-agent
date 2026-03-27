@@ -37,10 +37,10 @@ GOOGLE_API_KEY="your_api_key_here"          # my key is "youseriouslythoughtiwou
 ### 3. Build and Run
 ```bash
 # Build the Docker image
-docker build -t loblaw-rag-api .
+docker build -t agentic-retail-agent
 
 # Run the container (maps port 8000)
-docker run -p 8000:8000 --env-file .env loblaw-rag-api
+docker run -p 8000:8000 --env-file .env agentic-retail-agent
 ```
 
 ### 4. Test the API
@@ -58,7 +58,7 @@ If you wish to run the service locally without Docker:
 # then...
 
 # 2. Set up a virtual environment
-cd loblaw-rag-analytics
+cd agentic-retail-agent
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
